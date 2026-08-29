@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruno | Consultor Imobiliário - Imóveis na Planta e Minha Casa Minha Vida</title>
+    <title>Bruno | Imóveis na Planta e Minha Casa Minha Vida</title>
     <meta name="description" content="Consultor especializado em imóveis novos direto da construtora. Na planta e Minha Casa Minha Vida.">
     
-    <!-- Favicon (Logo oficial) -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%231a365d'/><path d='M25 55 L50 30 L75 55 V78 H25 Z' fill='%23ffffff'/><path d='M50 30 L75 55 H25 Z' fill='%2368d391'/><rect x='44' y='58' width='12' height='20' rx='1' fill='%231a365d'/><text x='50' y='52' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%231a365d' text-anchor='middle' dominant-baseline='middle'>B</text></svg>" type="image/svg+xml">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230A1628'/><path d='M25 55 L50 30 L75 55 V78 H25 Z' fill='%23ffffff'/><path d='M50 30 L75 55 H25 Z' fill='%23D4AF37'/><rect x='44' y='58' width='12' height='20' rx='1' fill='%230A1628'/><text x='50' y='52' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%230A1628' text-anchor='middle' dominant-baseline='middle'>B</text></svg>" type="image/svg+xml">
 
     <style>
+        :root {
+            --navy: #0A1628;
+            --navy-light: #132337;
+            --gold: #D4AF37;
+            --gold-soft: #E8D5A3;
+            --white: #ffffff;
+            --off-white: #F8F7F4;
+            --text: #1a1a1a;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -19,18 +29,18 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            color: var(--text);
+            background-color: var(--off-white);
         }
 
         header {
-            background: linear-gradient(135deg, #1a365d, #2c5282);
-            color: white;
+            background: var(--navy);
+            color: var(--white);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.15);
         }
 
         .container {
@@ -49,7 +59,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             font-weight: bold;
         }
 
@@ -59,11 +69,11 @@
         }
 
         .logo span {
-            color: #68d391;
+            color: var(--gold);
         }
 
         nav a {
-            color: white;
+            color: var(--white);
             text-decoration: none;
             margin-left: 25px;
             font-weight: 500;
@@ -71,13 +81,13 @@
         }
 
         nav a:hover {
-            color: #68d391;
+            color: var(--gold);
         }
 
         .hero {
-            background: linear-gradient(rgba(26, 54, 93, 0.85), rgba(26, 54, 93, 0.85)), 
+            background: linear-gradient(rgba(10, 22, 40, 0.88), rgba(10, 22, 40, 0.88)), 
                         url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
-            color: white;
+            color: var(--white);
             padding: 100px 0;
             text-align: center;
         }
@@ -94,12 +104,13 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            opacity: 0.95;
         }
 
         .btn {
             display: inline-block;
-            background: #25D366;
-            color: white;
+            background: var(--gold);
+            color: var(--navy);
             padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
@@ -111,32 +122,33 @@
         }
 
         .btn:hover {
-            background: #128C7E;
+            background: #c9a227;
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.35);
         }
 
         .btn-secondary {
             background: transparent;
-            border: 2px solid white;
+            border: 2px solid var(--gold);
+            color: var(--gold);
             margin-left: 15px;
         }
 
         .btn-secondary:hover {
-            background: white;
-            color: #1a365d;
+            background: var(--gold);
+            color: var(--navy);
         }
 
         .services {
             padding: 80px 0;
-            background: white;
+            background: var(--white);
         }
 
         .section-title {
             text-align: center;
             font-size: 2.2rem;
             margin-bottom: 50px;
-            color: #1a365d;
+            color: var(--navy);
         }
 
         .services-grid {
@@ -146,21 +158,21 @@
         }
 
         .service-card {
-            background: #f8f9fa;
+            background: var(--off-white);
             padding: 30px;
             border-radius: 12px;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #e8e4dc;
         }
 
         .service-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 12px 30px rgba(10, 22, 40, 0.08);
         }
 
         .service-card h3 {
-            color: #2c5282;
+            color: var(--navy);
             margin: 15px 0 10px;
         }
 
@@ -169,25 +181,25 @@
         }
 
         .lead-form {
-            background: linear-gradient(135deg, #1a365d, #2c5282);
-            color: white;
+            background: var(--navy);
+            color: var(--white);
             padding: 80px 0;
         }
 
         .form-container {
             max-width: 500px;
             margin: 0 auto;
-            background: white;
+            background: var(--white);
             padding: 40px;
             border-radius: 16px;
-            color: #333;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            color: var(--text);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
         }
 
         .form-container h2 {
             text-align: center;
             margin-bottom: 10px;
-            color: #1a365d;
+            color: var(--navy);
         }
 
         .form-container p {
@@ -204,24 +216,25 @@
             display: block;
             margin-bottom: 6px;
             font-weight: 600;
+            color: var(--navy);
         }
 
         input, select, textarea {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid #cbd5e0;
+            border: 1px solid #d1d5db;
             border-radius: 8px;
             font-size: 1rem;
         }
 
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: #25D366;
+            border-color: var(--gold);
         }
 
         .why-me {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: var(--off-white);
         }
 
         .why-grid {
@@ -231,31 +244,30 @@
         }
 
         .why-item {
-            background: white;
+            background: var(--white);
             padding: 25px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
         }
 
         .why-item h4 {
-            color: #2c5282;
+            color: var(--navy);
             margin: 12px 0 8px;
         }
 
         footer {
-            background: #1a202c;
+            background: var(--navy);
             color: #a0aec0;
             padding: 40px 0 20px;
             text-align: center;
         }
 
         footer a {
-            color: #68d391;
+            color: var(--gold);
             text-decoration: none;
         }
 
-        /* Botão WhatsApp Flutuante - Ícone oficial */
         .whatsapp-float {
             position: fixed;
             bottom: 25px;
@@ -268,7 +280,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
             z-index: 1000;
             transition: all 0.3s;
             text-decoration: none;
@@ -313,14 +325,13 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <div class="container header-content">
             <div class="logo">
                 <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="48" fill="#ffffff"/>
-                    <path d="M25 55 L50 30 L75 55 V78 H25 Z" fill="#1a365d"/>
-                    <path d="M50 30 L75 55 H25 Z" fill="#68d391"/>
+                    <path d="M25 55 L50 30 L75 55 V78 H25 Z" fill="#0A1628"/>
+                    <path d="M50 30 L75 55 H25 Z" fill="#D4AF37"/>
                     <rect x="44" y="58" width="12" height="20" rx="1" fill="#ffffff"/>
                     <text x="50" y="52" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle" dominant-baseline="middle">B</text>
                 </svg>
@@ -333,19 +344,17 @@
         </div>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="container">
             <h1>Imóveis novos direto da construtora<br>Na planta e Minha Casa Minha Vida</h1>
             <p>Especialista em imóveis na planta e no programa Minha Casa Minha Vida. Atendimento transparente e personalizado para você conquistar seu imóvel próprio.</p>
             <a href="https://wa.me/5519999061687?text=Olá%20Bruno,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações" class="btn" target="_blank">
-                💬 Falar no WhatsApp
+                Falar no WhatsApp
             </a>
             <a href="#avaliacao" class="btn btn-secondary">Quero ser atendido</a>
         </div>
     </section>
 
-    <!-- Serviços -->
     <section class="services" id="servicos">
         <div class="container">
             <h2 class="section-title">Como posso te ajudar</h2>
@@ -374,7 +383,6 @@
         </div>
     </section>
 
-    <!-- Formulário -->
     <section class="lead-form" id="avaliacao">
         <div class="container">
             <div class="form-container">
@@ -414,7 +422,6 @@
         </div>
     </section>
 
-    <!-- Por que me escolher -->
     <section class="why-me">
         <div class="container">
             <h2 class="section-title">Por que falar comigo?</h2>
@@ -439,7 +446,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p><strong>Bruno | Consultor Imobiliário</strong></p>
@@ -451,13 +457,13 @@
         </div>
     </footer>
 
-    <!-- Botão WhatsApp Flutuante com ícone oficial -->
+    <!-- Botão WhatsApp -->
     <a href="https://wa.me/5519999061687?text=Olá%20Bruno,%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar" 
        class="whatsapp-float" 
        target="_blank" 
        title="Fale comigo no WhatsApp">
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16.004 0C7.164 0 0 7.164 0 16.004c0 2.824.736 5.576 2.14 8.012L.072 31.24l7.408-1.944A15.94 15.94 0 0016.004 32C24.836 32 32 24.836 32 16.004S24.836 0 16.004 0zm0 29.2a13.16 13.16 0 01-6.7-1.828l-.48-.284-4.96 1.3 1.324-4.836-.312-.496A13.14 13.14 0 012.8 16.004c0-7.28 5.924-13.204 13.204-13.204s13.204 5.924 13.204 13.204S23.284 29.2 16.004 29.2zm7.24-9.88c-.396-.2-2.34-1.156-2.704-1.288-.364-.132-.628-.2-.892.2s-1.024 1.288-1.256 1.552c-.232.264-.464.296-.86.096-.396-.2-1.672-.616-3.184-1.964-1.176-1.048-1.972-2.344-2.204-2.74-.232-.396-.024-.612.176-.808.18-.18.396-.468.596-.7.2-.232.264-.396.396-.66.132-.264.068-.496-.032-.696-.1-.2-.892-2.148-1.224-2.94-.32-.772-.648-.668-.892-.68-.232-.012-.496-.012-.76-.012s-.7.1-1.064.496c-.364.396-1.392 1.36-1.392 3.316s1.424 3.844 1.624 4.108c.2.264 2.8 4.276 6.788 5.996  .948.412 1.672.656 2.24.84.944.304 1.804.26 2.484.158.76-.114 2.34-.956 2.672-1.88.332-.924.332-1.716.232-1.88-.1-.164-.364-.264-.76-.464z"/>
+            <path d="M16.004 0C7.164 0 0 7.164 0 16.004c0 2.824.736 5.576 2.14 8.012L.072 31.24l7.408-1.944A15.94 15.94 0 0016.004 32C24.836 32 32 24.836 32 16.004S24.836 0 16.004 0zm0 29.2a13.16 13.16 0 01-6.7-1.828l-.48-.284-4.96 1.3 1.324-4.836-.312-.496A13.14 13.14 0 012.8 16.004c0-7.28 5.924-13.204 13.204-13.204s13.204 5.924 13.204 13.204S23.284 29.2 16.004 29.2zm7.24-9.88c-.396-.2-2.34-1.156-2.704-1.288-.364-.132-.628-.2-.892.2s-1.024 1.288-1.256 1.552c-.232.264-.464.296-.86.096-.396-.2-1.672-.616-3.184-1.964-1.176-1.048-1.972-2.344-2.204-2.74-.232-.396-.024-.612.176-.808.18-.18.396-.468.596-.7.2-.232.264-.396.396-.66.132-.264.068-.496-.032-.696-.1-.2-.892-2.148-1.224-2.94-.32-.772-.648-.668-.892-.68-.232-.012-.496-.012-.76-.012s-.7.1-1.064.496c-.364.396-1.392 1.36-1.392 3.316s1.424 3.844 1.624 4.108c.2.264 2.8 4.276 6.788 5.996.948.412 1.672.656 2.24.84.944.304 1.804.26 2.484.158.76-.114 2.34-.956 2.672-1.88.332-.924.332-1.716.232-1.88-.1-.164-.364-.264-.76-.464z"/>
         </svg>
     </a>
 
